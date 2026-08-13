@@ -17,7 +17,7 @@ function App() {
 
   // Get products from FastAPI
   const loadProducts = () => {
-    fetch('http://127.0.0.1:8000/products')
+    fetch('https://jewelhub-kucc.onrender.com/products')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error:', error))
@@ -39,7 +39,7 @@ function App() {
   const addProduct = (event) => {
     event.preventDefault()
 
-    fetch('http://127.0.0.1:8000/products', {
+    fetch('https://jewelhub-kucc.onrender.com/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
